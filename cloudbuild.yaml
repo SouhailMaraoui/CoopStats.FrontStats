@@ -1,3 +1,6 @@
 steps:
-  - name: gcr.io/coopstats-106e3/firebase
-    args: ['deploy', '--project=coopstats-106e3', '--only=hosting']
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/coopstats-106e3/firebase', '.']
+images:
+  - 'gcr.io/coopstats-106e3/firebase'
+tags: ['cloud-builders-community']
