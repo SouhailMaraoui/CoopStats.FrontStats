@@ -1,6 +1,6 @@
 steps:
   - name: 'gcr.io/cloud-builders/npm'
-    args: ['cache','verify']
+    args: ['cache','clean','--force']
   - name: 'gcr.io/cloud-builders/npm'
     args: ['install']
   - name: 'gcr.io/cloud-builders/npm'
