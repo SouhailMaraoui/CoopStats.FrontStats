@@ -1,5 +1,7 @@
 steps:
   - name: 'gcr.io/cloud-builders/npm'
+    args: ['install']
+  - name: 'gcr.io/cloud-builders/npm'
     args: ['run-script','build']
   - name: gcr.io/coopstats-106e3/firebase
     args: ['deploy', '--project=coopstats-106e3', '--only=hosting']
