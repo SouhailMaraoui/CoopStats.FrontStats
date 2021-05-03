@@ -230,10 +230,8 @@ class Activity extends Component {
 
         let temp=this.state.accordion;
         temp[0]=newAccordion;
-        this.setState({
-            accordion:temp,
-            newTraining:newCreate
-        });
+        if(newCreate!==this.state.newTraining)
+            this.setState({accordion:temp, newTraining:newCreate});
         return formation;
     }
 
@@ -298,10 +296,8 @@ class Activity extends Component {
 
         let temp=this.state.accordion;
         temp[1]=newAccordion;
-        this.setState({
-            accordion:temp,
-            newProduct:newCreate
-        });
+        if(newCreate!==this.state.newProduct)
+            this.setState({accordion:temp, newProduct:newCreate});
         return production;
     }
 
@@ -394,10 +390,8 @@ class Activity extends Component {
 
         let temp=this.state.accordion;
         temp[2]=newAccordion;
-        this.setState({
-            accordion:temp,
-            newEvent:newCreate
-        });
+        if(newCreate!==this.state.newEvent)
+            this.setState({accordion:temp, newEvent:newCreate});
         return event;
     }
 
@@ -460,10 +454,8 @@ class Activity extends Component {
 
         let temp=this.state.accordion;
         temp[3]=newAccordion;
-        this.setState({
-            accordion:temp,
-            newComm:newCreate
-        });
+        if(newCreate!==this.state.newComm)
+            this.setState({accordion:temp, newComm:newCreate});
         return communication;
     }
 
@@ -547,10 +539,8 @@ class Activity extends Component {
 
         let temp=this.state.accordion;
         temp[4]=newAccordion;
-        this.setState({
-            accordion:temp,
-            newAssembly:newCreate
-        });
+        if(newCreate!==this.state.newAssembly)
+            this.setState({accordion:temp, newAssembly:newCreate});
         return assemble;
     }
 

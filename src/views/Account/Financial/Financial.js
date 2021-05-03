@@ -143,10 +143,8 @@ class Activity extends Component {
         // eslint-disable-next-line react/no-direct-mutation-state
         let temp=this.state.accordion;
         temp[1]=newAccordion;
-        this.setState({
-            accordion:temp,
-            newLosses:newLosses
-        });
+        if(this.state.newLosses!==newLosses)
+            this.setState({accordion:temp, newLosses:newLosses});
         return losses;
     }
 
@@ -211,10 +209,8 @@ class Activity extends Component {
 
         let temp=this.state.accordion;
         temp[0]=newAccordion;
-        this.setState({
-            accordion:temp,
-            newGains:newGains
-        });
+        if(this.state.newGains!==newGains)
+            this.setState({accordion:temp, newGains:newGains});
         return gains;
     }
 

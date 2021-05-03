@@ -35,7 +35,7 @@ class Register extends Component {
 
       activeTab: new Array(1).fill('1'),
       activeIndex:1,
-      membersNumber:0,
+      membersNumber:1,
       accordion: [],
 
       colors:[["info","light","light","light","light"]],
@@ -327,7 +327,8 @@ class Register extends Component {
       members.push(this.newMember(i));
     }
 
-    this.setState({accordion:newAccordion,newMembers: newMembers});
+    if(this.state.newMembers!==newMembers)
+      this.setState({accordion:newAccordion,newMembers: newMembers});
 
     return members;
   }
